@@ -115,7 +115,12 @@ And... fuck you google for being angry i am not in USA.
             await msg.channel.send(f"Average WPM set to {avgwpm}", delete_after=2)
         except (ValueError, IndexError):
             await msg.channel.send("Please provide a valid number for WPM.", delete_after=2)
-
+    if msg.content.startswith("uni!source"):
+        await msg.channel.send(
+            f"""
+My source code: https://github.com/simpleuserdontwatch/Uni-ai/tree/main
+            """, silent=True
+        )
     if (bot.user.mentioned_in(msg) or isdms) and not stop:
         # find any attachments we can use for img
         img = None
