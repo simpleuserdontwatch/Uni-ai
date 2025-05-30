@@ -74,6 +74,8 @@ async def on_message(msg):
     message = f"(Replying to: {referenced_user_name}: {referenced_content})\n(Time: {msg.created_at.strftime("%H:%M")}) ({user_name}): {content}" if referenced_message else f"{user_name}: {content}"
     if isdms:
         message = "(DMS) "+message
+    else:
+        message = f"(#{msg.channel.name}, guild name: {msg.guild.name}) "+message
 
     # Now, 'message' contains the formatted text
     #print(message)
