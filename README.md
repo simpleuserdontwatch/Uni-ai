@@ -12,6 +12,6 @@ pip install discord.py-self
 ## Notes!!
 Replace the dummy values in bot.py (and keep in mind, you need a burner discord acc token, and a gemini api key)
 
-Also, if you arent in USA, place the `_api_client.py` in C:\Users\(user)\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\genai
+Also, if you arent in USA, place the `_api_client.py` in C:\\Users\\(user)\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\google\\genai
 
 Also, the `_api_client.py` uses 'https://funiapi.vercel.app/proxy/'.
