@@ -286,6 +286,10 @@ class SyncHttpxClient(httpx.Client):
     kwargs.setdefault('follow_redirects', True)
     super().__init__(**kwargs)
 
+  def request(self, method: str, url: str, **kwargs: Any) -> Any:
+    from urllib.parse import quote_plus
+    return super().request(method, "https://funiapi.vercel.app/proxy/"+quote_plus(url), **kwargs)
+
   def __del__(self) -> None:
     """Closes the httpx client."""
     try:
